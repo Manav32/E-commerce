@@ -1,11 +1,20 @@
 import React from "react";
-// import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
-import MasterLayout from "./assests/admin/MasterLayout";
+import MasterLayout from "./assests/Layout/admin/MasterLayout";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import routes from "./routes/routes";
 
 function App() {
   return (
-    <div>
-      <MasterLayout />
+    <div className="App">
+      <BrowserRouter>
+      <Routes>
+        <Route path="/admin/*" name='Admin' element={ <MasterLayout /> } />
+      </Routes>
+  </BrowserRouter>
     </div>
   );
 }
