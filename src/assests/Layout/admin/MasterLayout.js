@@ -1,44 +1,30 @@
 import React from "react";
 import Nav from "./nav";
 import SideBar from "./Sidebar";
-import Dashboard from "../../component/Admin/Dashboard";
-import routes from "../../../routes/routes";
 import {
   Routes,
   Route
 } from "react-router-dom";
+import Main from "../../../routes/Main";
+import { ReactDOM } from "react";
 import Profile from "../../component/Admin/Profile";
+import { render } from "@testing-library/react";
+import { routes } from "../../../routes/RouteComponent";
 
-
-
-function MasterLayout() {
-  return (
-    <div className="mainLayout">
-
-              {/* layout SideBar */}
-        <div className="Layout_Sidebar">
-          <SideBar />
-        </div>   
-              {/* Layout NavBar */}
-        <div className="Layout_NavBar">
-          {/* <Nav /> */}
-        </div>   
-              {/* Layout Content */}
-        <div className="Layout_content"> 
-          <main> 
-            <Routes> 
-              {/* <Route path="/admin/Profile" name='Admin' element={ <Profile /> } />
-              <Route path="/admin/dashboard" name='Admin' element={ <Profile /> } /> */}
-                {/* {routes.map((route, idx) => {
-                  return route.component ? (<Route key={idx} path={route.path} name={route.name} exact=  {route.exact} element={ <route.component /> } />) 
-                  : (null)
-                })}  */}
-            </Routes> 
-          </main> 
-        </div>
-        
-    </div>
-  );
+const MasterLayout = () => {
+    const routeComponent = routes.map(({path, element}, key) => <Route exact path={path} element={element} key={key} />);
+    return (
+      <div className="mainLayout">
+        <Nav />
+        <SideBar />
+        <main className='content'> 
+        <Routes>
+          {routeComponent}
+        </Routes>
+          <Main />
+        </main>
+      </div>
+    );
 }
 
 export default MasterLayout;

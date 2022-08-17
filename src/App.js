@@ -5,16 +5,16 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import routes from "./routes/routes";
+import Main from "./routes/Main";
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <BrowserRouter>
-      <Routes>
-        <Route path="/admin/*" name='Admin' element={ <MasterLayout /> } />
-      </Routes>
-  </BrowserRouter>
+      {/* <Routes> */}
+          <MasterLayout />
+        {/* </Routes> */}
+          
+      
     </div>
   );
 }

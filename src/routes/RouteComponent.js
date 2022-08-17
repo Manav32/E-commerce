@@ -11,13 +11,13 @@ export const routes = [
         path: '/admin/dashboard',
         exact: true, 
         name: 'Dashboard', 
-        component: Dashboard 
+        element: Dashboard 
     },
     { 
         path: '/admin/profile', 
         exact: true,
         name: 'Profile', 
-        component: Profile
+        element: Profile
     }
 
 ];
