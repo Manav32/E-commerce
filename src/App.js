@@ -1,16 +1,18 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
-import MasterLayout from "./assests/Layout/admin/MasterLayout";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Home } from "./assests/component/frontend/Home";
-import { Routes, Route } from "react-router-dom";
-
+import routes from "./routes/RouteComponent";
 const App = () => {
+  const routeComponent = routes.map((item) => (
+    <Route exact path={item.path} element={<item.element />} key={item.id}/>
+  ));
   return (
     <div className="App">
-      <Routes>
-        <Route path="/" element={Home()} />
-        <Route path="/admin" element={MasterLayout()} />
-      </Routes>
+      <BrowserRouter>
+        <main className="content">
+        <Routes>{routeComponent}</Routes>
+        </main>
+      </BrowserRouter>
     </div>
   );
 };

@@ -1,25 +1,38 @@
 import Dashboard from "../assests/component/Admin/Dashboard"
 import Profile from "../assests/component/Admin/Profile"
+import { Home } from "../assests/component/frontend/Home";
+import MasterLayout from "../assests/Layout/admin/MasterLayout";
 
-export const routes = [
+ const routes = [
     { 
-        path: '/admin',
+        id:1,
+        path: '/',
         exact: true,
-        name: 'Admin'
+        name: 'Home',
+        element: Home
     },
     { 
+        id:2,
+        path: '/admin',
+        exact: true,
+        name: 'Admin',
+        element: MasterLayout
+    },
+    { 
+        id:3,
         path: '/admin/dashboard',
         exact: true, 
         name: 'Dashboard', 
-        element: Dashboard()
+        element: Dashboard
     },
     { 
+        id:4,
         path: '/admin/profile', 
         exact: true,
         name: 'Profile', 
-        element: Profile()
+        element: Profile
     }
 
 ];
 
-// export default routes;
+export default routes;
