@@ -10,10 +10,9 @@ import Main from "./routes/Main";
 const App = () => {
   return (
     <div className="App">
-      {/* <Routes> */}
+      
           <MasterLayout />
-        {/* </Routes> */}
-          
+        
       
     </div>
   );

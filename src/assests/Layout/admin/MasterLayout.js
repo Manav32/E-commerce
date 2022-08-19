@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "./nav";
 import SideBar from "./Sidebar";
 import {
+  BrowserRouter,     //Added browser router 
   Routes,
   Route
 } from "react-router-dom";
