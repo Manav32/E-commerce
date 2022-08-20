@@ -15,8 +15,7 @@ import MasterLayout from "../assests/Layout/admin/MasterLayout";
         exact: true,
         name: 'Admin',
         element: MasterLayout
-    },
-
+     },
 ];
 
 export default routes;
