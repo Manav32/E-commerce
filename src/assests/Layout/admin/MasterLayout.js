@@ -1,33 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import Nav from "./nav";
 import SideBar from "./Sidebar";
 import AdminRoute from "../../../routes/AdminRouteComponent";
+import Dashboard from "../../component/Admin/Dashboard";
+import { Route } from "react-router-dom";
 
 const MasterLayout = () => {
-  
-    function getContent(){
-      function getComponent(item){
-        if(item.path === window.location.pathname){
-            return item.element
-        }else{
-          return null;
-        }
-      }
-      const component = AdminRoute.map((item) => (
-        getComponent(item)
-      ));      
-      return component;
-    }
-
-    const content = getContent();
 
   return (
     <div className="mainLayout">
       <Nav />
       <SideBar />
-        <main className="d">
+        {/* <main className="content">
           {content} 
-        </main>
+        </main> */}
     </div>
   );
 };
