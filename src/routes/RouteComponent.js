@@ -1,5 +1,3 @@
-import Dashboard from "../assests/component/Admin/Dashboard"
-import Profile from "../assests/component/Admin/Profile"
 import { Home } from "../assests/component/frontend/Home";
 import MasterLayout from "../assests/Layout/admin/MasterLayout";
 
