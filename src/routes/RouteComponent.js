@@ -13,25 +13,11 @@ import MasterLayout from "../assests/Layout/admin/MasterLayout";
     },
     { 
         id:2,
-        path: '/admin',
+        path: '/admin/*',
         exact: true,
         name: 'Admin',
         element: MasterLayout
     },
-    { 
-        id:3,
-        path: '/admin/dashboard',
-        exact: true, 
-        name: 'Dashboard', 
-        element: Dashboard
-    },
-    { 
-        id:4,
-        path: '/admin/profile', 
-        exact: true,
-        name: 'Profile', 
-        element: Profile
-    }
 
 ];
 
