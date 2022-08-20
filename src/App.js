@@ -5,20 +5,18 @@ import Profile from "./assests/component/Admin/Profile";
 import { Home } from "./assests/component/frontend/Home";
 import MasterLayout from "./assests/Layout/admin/MasterLayout";
 import routes from "./routes/RouteComponent";
+import AdminRouteComponent from "./routes/AdminRouteComponent";
+
 const App = () => {
-  // const routeComponent = routes.map((item) => (
-  //   <Route   path={item.path} element={<item.element />} />
-  // ));
+  const routeComponent = routes.map((item) => (
+    <Route   path={item.path} element={<item.element />} />
+  ));
   return (
     <div className="App">
-        {/* <Routes>{routeComponent}</Routes> */}
         <Routes>
-          <Route exact path="" element={<Home />} />
-          <Route exact path="admin" element={<MasterLayout />} >
-              <Route path="Dashboard" element={<Dashboard />}></Route>
-              <Route path="profile" element={<Profile />}></Route>
-          </Route>
+          {routeComponent}
         </Routes>
+        {AdminRouteComponent()}
     </div>
   );
 };
