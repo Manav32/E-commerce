@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const SideBar = () => {
+const AdminSideBar = () => {
 
     function dropDown(){
         document.querySelector('#submenu').classList.toggle('hidden');
@@ -76,4 +76,4 @@ const SideBar = () => {
     );
 
 }
-export default SideBar;
+export default AdminSideBar;

@@ -1,14 +1,14 @@
 import React from "react";
-import Nav from "./nav";
-import SideBar from "./Sidebar";
+import AdminNav from "./AdminNav";
+import AdminSideBar from "./AdminSidebar";
 
 
 const MasterLayout = () => {
 
   return (
     <div className="mainLayout">
-      <Nav />
-      <SideBar />
+      <AdminNav />
+      <AdminSideBar />
     </div>
   );
 };
